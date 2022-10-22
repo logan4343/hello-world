@@ -1,0 +1,11 @@
+
+signal : create the signalBell.h , using the normal function ptr
+signal1: add the std::function<void(int)> , add the class function , introduce the object of class signalBell
+signal2: template<typename T>, add the signals.h
+signal3:  using the second signal Bell_2 with double in construct function 
+signal4: unfixed number parameter, like: typename... T, add the protect about the empty of pFunc
+
+signal5: many connecting function to handle-- add the workers
+signal6: one function connect many times, implement only once;
+
+siganl7:  add the T as return vale of function in the template

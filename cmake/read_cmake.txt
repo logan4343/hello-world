@@ -1,0 +1,23 @@
+cmake01:
+          编译出一个slave的静态库和动态库
+
+cmake02:
+           使用cmake01编译出来的库
+
+cmake03:  一个会crash的main函数
+
+cmake04:  验证基类继承了Base类之后，在函数里面间接调用的是base的还是derive的？
+
+cmake05:  验证option这个关键词
+          cmake -D TEST_OPTION=ON .. 
+
+ulimit -c
+ulimit -c unlimited
+ulimit -s 102400
+echo  "/corefile/core-%e-%p-%t" >/proc/sys/kernel/core_pattern
+
+遗留问题:
+          cmake01中, INSTALL路径也是全路径:
+                                           解决， 讲CMAKE_INSTALL_PREFIX放到PROJECT后面
+          cmake02中，LINK_LIBRARIES没有起作用， 目前用的是绝对路径:
+                                           解决，LINK_DIRECTORIES 放到PROJECT后面

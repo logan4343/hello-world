@@ -1,0 +1,3 @@
+PROJECT(SLAVE)
+SET(CMAKE_INSTALL_PREFIX /home/sl/cpluscplus/cmake/)
+ADD_SUBDIRECTORY(src bin)

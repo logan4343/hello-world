@@ -1,0 +1,2 @@
+/usr/bin/ar qc libslave.a CMakeFiles/slave_static.dir/slave.o
+/usr/bin/ranlib libslave.a

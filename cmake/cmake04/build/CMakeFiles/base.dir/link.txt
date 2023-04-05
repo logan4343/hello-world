@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/base.dir/main.cc.o CMakeFiles/base.dir/derive.cc.o CMakeFiles/base.dir/base.cc.o -o base 

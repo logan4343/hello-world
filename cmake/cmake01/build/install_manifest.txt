@@ -1,0 +1,3 @@
+/home/sl/cpluscplus/cmake/include/slave.h
+/home/sl/cpluscplus/cmake/lib/libslave.a
+/home/sl/cpluscplus/cmake/lib/libslave.so

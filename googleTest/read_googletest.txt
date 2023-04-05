@@ -1,0 +1,35 @@
+
+EXPECT_EQ EXPECT_NE 如果判断失败，继续运行
+ASSERT_EQ  ASSERT_NE  如果判断失败，停止运行
+
+
+1_googletest: 搭googletest的框架，可以运行
+             经验: 要设置cmake_minimum_required(VERSION 3.20)
+             链接lib库的时候 ，用gtest thread而不是libgtest.a
+
+2_googletest: 搭googlemock的框架，可以运行
+             经验: MOCKMETHOD/ MOCKMETHOD0 两种写法
+             经验: TEST()中的第一参数是testsuite 
+3_googletest: 与最初写的base函数进行融合测试
+           经验:要stub的函数类 恰好是纯虚类
+
+4_googletest : 验证如果base类是一个非虚函数，看怎么处理
+            经验: 通过打stub,stub里面再调用mock的方法
+            但是如果使用全局的方法来定义mock,googletest会
+            检查出leak的问题，通过下面的方法规避
+            ::testing::Mock::AllowLeak(&mockDerive);       
+
+5_googletest: simple1.cc 单独验证
+               g++ simple1.cc simple1_test.cc -o simple1 -lgtest -lpthread -lgtest_main
+               链接ianj了lgtest_main库函数之后， 不用写 main函数了                
+
+6_googletest: 区别TEST 和 TEST_F
+
+
+7_googletest: 通过其他方法来解决leak的问题   -- 没解决 
+
+8_googletest: 测验ON_CALL EXPECT_CALL     
+
+9_googletest: 实现Invoke功能
+
+

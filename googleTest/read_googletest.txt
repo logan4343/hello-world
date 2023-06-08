@@ -3,6 +3,12 @@ EXPECT_EQ EXPECT_NE 如果判断失败，继续运行
 ASSERT_EQ  ASSERT_NE  如果判断失败，停止运行
 
 
+如何查看一个运行包中含有多少case:
+         ./googleTest --gtest_filter=shoule_3_when_1_and_2
+
+选择其中一个case:
+        ./googleTest --gtest_filter=shoule_3_when_1_and_2
+
 1_googletest: 搭googletest的框架，可以运行
              经验: 要设置cmake_minimum_required(VERSION 3.20)
              链接lib库的时候 ，用gtest thread而不是libgtest.a
